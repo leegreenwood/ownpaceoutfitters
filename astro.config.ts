@@ -68,6 +68,15 @@ export default defineConfig({
       styles: ["normal", "italic"],
       formats: ["woff", "ttf"],
     },
+    {
+      name: "Roboto Slab",
+      cssVariable: "--font-roboto-slab",
+      provider: fontProviders.google(),
+      fallbacks: ["ui-serif", "Georgia", "serif"],
+      weights: [400, 600, 700],
+      styles: ["normal"],
+      formats: ["woff", "ttf"],
+    },
   ],
   env: {
     schema: {
