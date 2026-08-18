@@ -12,9 +12,8 @@
   --font-mono: var(--font-google-sans-code), monospace;
 }
 
-/* Light theme values — derived from the Own Pace Outfitters trail badge */
-:root,
-[data-theme="light"] {
+/* Theme values — derived from the Own Pace Outfitters trail badge */
+:root {
   --background: #fbf7ec; /* parchment */
   --foreground: #1f2b22; /* pine charcoal */
   --accent: #a85217; /* trail rust, deepened from the badge path for AA contrast */
@@ -22,15 +21,4 @@
   --muted: #efe7d2; /* parchment-tan */
   --muted-foreground: #5b6b57; /* sage */
   --border: #e3d9bf; /* tan */
-}
-
-/* Dark theme values */
-[data-theme="dark"] {
-  --background: #16201a; /* pine night */
-  --foreground: #f1ecdd; /* parchment */
-  --accent: #e4772a; /* brightened trail rust for contrast on dark bg */
-  --accent-foreground: #16201a;
-  --muted: #253226; /* dark fern surface */
-  --muted-foreground: #a8b6a0; /* sage, lightened */
-  --border: #3a4a38; /* dark fern border */
 }
