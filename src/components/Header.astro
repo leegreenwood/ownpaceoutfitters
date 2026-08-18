@@ -1,10 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import opoIcon from "@/assets/brand/opo-icon.png";
+import opoBadge from "@/assets/brand/opo-badge.png";
 import IconUnderline from "@/assets/icons/IconUnderline.svg";
 import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
 import IconArchive from "@/assets/icons/IconArchive.svg";
+import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconSearch from "@/assets/icons/IconSearch.svg";
 import IconX from "@/assets/icons/IconX.svg";
 import LinkButton from "./LinkButton.astro";
@@ -32,6 +33,12 @@ const isActive = (path: string) => {
   const pathArray = path.split("/").filter(p => p.trim());
   return currentPath === path || currentPathArray[0] === pathArray[0];
 };
+
+// Break the wordmark onto two lines before its last word (e.g. "Own Pace" / "Outfitters")
+// so it sits at a narrower, better-balanced width next to the crest.
+const titleWords = site.title.split(" ");
+const titleFirstLine = titleWords.slice(0, -1).join(" ");
+const titleLastLine = titleWords.at(-1);
 ---
 
 <a
@@ -46,20 +53,23 @@ const isActive = (path: string) => {
   class="app-layout flex flex-col items-center justify-between sm:flex-row"
 >
   <div
-    class="border-border bg-background relative flex w-full items-baseline justify-between border-b py-4 sm:items-center sm:py-6"
+    class="border-border bg-background relative flex w-full items-baseline justify-between border-b py-8 sm:items-center sm:py-12"
   >
     <a
       href={getRelativeLocaleUrl(locale, "")}
-      class="font-heading absolute flex items-center gap-2.5 py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
+      class="font-heading absolute flex items-center gap-3 py-1 text-xl leading-tight font-semibold whitespace-nowrap sm:static sm:my-auto sm:gap-4 sm:text-2xl"
     >
       <Image
-        src={opoIcon}
+        src={opoBadge}
         alt=""
-        width={80}
-        height={80}
-        class="border-border size-9 shrink-0 rounded-md border sm:size-11"
+        width={160}
+        height={197}
+        class="border-border h-16 w-auto shrink-0 rounded-md border sm:h-20"
       />
-      {site.title}
+      <span class="flex flex-col">
+        <span>{titleFirstLine}</span>
+        <span>{titleLastLine}</span>
+      </span>
     </a>
     <nav
       id="nav-menu"
@@ -89,21 +99,46 @@ const isActive = (path: string) => {
             {t.nav.whatWeOffer}
           </a>
         </li>
-        <li class="col-span-2">
-          <a
-            href={getRelativeLocaleUrl(locale, "about")}
-            class:list={{ "active-nav": isActive("/about") }}
-          >
-            {t.nav.about}
-          </a>
-        </li>
-        <li class="col-span-2">
-          <a
-            href={getRelativeLocaleUrl(locale, "about-lee")}
-            class:list={{ "active-nav": isActive("/about-lee") }}
-          >
-            {t.nav.aboutLee}
-          </a>
+        <li class="col-span-2 sm:relative">
+          <details class="group">
+            <summary
+              class:list={[
+                "focus-outline hover:text-accent flex cursor-pointer list-none items-center justify-center gap-1 px-4 py-3 text-center font-medium sm:px-2 sm:py-1 [&::-webkit-details-marker]:hidden",
+                { "active-nav": isActive("/about") || isActive("/about-lee") },
+              ]}
+            >
+              {t.nav.about}
+              <IconChevronLeft
+                class="size-3.5 -rotate-90 transition-transform group-open:rotate-90"
+              />
+            </summary>
+            <ul
+              class="sm:border-border sm:bg-background mb-2 flex flex-col items-center gap-1 sm:absolute sm:start-0 sm:top-full sm:z-20 sm:mt-2 sm:min-w-40 sm:items-stretch sm:gap-0 sm:rounded-md sm:border sm:py-1 sm:shadow-md"
+            >
+              <li>
+                <a
+                  href={getRelativeLocaleUrl(locale, "about")}
+                  class:list={[
+                    "hover:text-accent block px-4 py-2 text-center font-medium sm:px-3 sm:py-1.5 sm:text-start sm:font-normal",
+                    { "text-accent": isActive("/about") },
+                  ]}
+                >
+                  {t.nav.aboutOpo}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={getRelativeLocaleUrl(locale, "about-lee")}
+                  class:list={[
+                    "hover:text-accent block px-4 py-2 text-center font-medium sm:px-3 sm:py-1.5 sm:text-start sm:font-normal",
+                    { "text-accent": isActive("/about-lee") },
+                  ]}
+                >
+                  {t.nav.aboutLee}
+                </a>
+              </li>
+            </ul>
+          </details>
         </li>
         <li class="col-span-2">
           <a
@@ -225,9 +260,23 @@ const isActive = (path: string) => {
     });
   }
 
+  function closeNavDropdownsOnOutsideClick() {
+    document.addEventListener("click", e => {
+      document
+        .querySelectorAll<HTMLDetailsElement>("#nav-menu details[open]")
+        .forEach(details => {
+          if (!details.contains(e.target as Node)) {
+            details.removeAttribute("open");
+          }
+        });
+    });
+  }
+
   toggleNav();
   document.addEventListener("astro:after-swap", toggleNav);
 
   handleSkipToContent();
   document.addEventListener("astro:after-swap", handleSkipToContent);
+
+  closeNavDropdownsOnOutsideClick();
 </script>

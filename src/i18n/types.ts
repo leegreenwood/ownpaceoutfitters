@@ -4,6 +4,7 @@ export interface UIStrings {
     posts: string;
     tags: string;
     about: string;
+    aboutOpo: string;
     whatWeOffer: string;
     aboutLee: string;
     contact: string;

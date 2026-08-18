@@ -6,6 +6,7 @@ export default {
     posts: "Blog",
     tags: "Tags",
     about: "About",
+    aboutOpo: "About OPO",
     whatWeOffer: "What We Offer",
     aboutLee: "About Lee",
     contact: "Contact",
