@@ -9,7 +9,7 @@ Own Pace Outfitters delivers the expedition component of the Duke of Edinburgh's
 
 Own Pace Outfitters is a trading name of **Independent Youth Volunteer Support (IYVS)**, a Community Interest Company built on years of hands-on youth work — Scouting, coaching, and outdoor education — rather than theory alone. That means every expedition we run sits behind IYVS's safeguarding framework and organisational backing: proper policies, proper accountability, and a charitable structure behind the commercial offer, not just an individual instructor operating alone.
 
-IYVS CIC · Company number [pending — confirm before launch] · Registered office: [pending — confirm before launch]
+IYVS CIC · Company number 16629816 · Registered office: 2 Coronation Road, Waterlooville, PO7 7FA
 
 ## Sibling programmes
 
