@@ -4,6 +4,7 @@ export interface UIStrings {
     posts: string;
     tags: string;
     about: string;
+    aboutOpo: string;
     whatWeOffer: string;
     aboutLee: string;
     contact: string;
@@ -58,7 +59,6 @@ export interface UIStrings {
     skipToContent: string;
     openMenu: string;
     closeMenu: string;
-    toggleTheme: string;
     searchPlaceholder: string;
     noResults: string;
     goToPreviousPage: string;

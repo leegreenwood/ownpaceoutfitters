@@ -7,28 +7,18 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code);
+  --font-heading: var(--font-roboto-slab), ui-serif, Georgia, serif;
+  --font-sans: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-google-sans-code), monospace;
 }
 
-/* Light theme values */
-:root,
-[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
+/* Theme values — derived from the Own Pace Outfitters trail badge */
+:root {
+  --background: #fbf7ec; /* parchment */
+  --foreground: #1f2b22; /* pine charcoal */
+  --accent: #a85217; /* trail rust, deepened from the badge path for AA contrast */
   --accent-foreground: #ffffff;
-  --muted: #e6e6e6;
-  --muted-foreground: #6b7280;
-  --border: #ece9e9;
-}
-
-/* Dark theme values */
-[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --accent-foreground: #ffffff;
-  --muted: #343f60;
-  --muted-foreground: #afb9ca;
-  --border: #ab4b08;
+  --muted: #efe7d2; /* parchment-tan */
+  --muted-foreground: #5b6b57; /* sage */
+  --border: #e3d9bf; /* tan */
 }

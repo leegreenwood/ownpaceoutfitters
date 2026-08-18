@@ -3,13 +3,25 @@
 @import "./typography.css";
 @import "rehype-callouts/theme/obsidian";
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-
 @layer base {
   * {
     @apply border-border outline-accent/75;
     scrollbar-width: auto;
     scrollbar-color: var(--color-muted) transparent;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+  code,
+  pre,
+  kbd,
+  samp {
+    @apply font-mono;
   }
   a,
   button,

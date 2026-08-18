@@ -21,6 +21,9 @@ import config from "./astro-paper.config";
 
 export default defineConfig({
   site: config.site.url,
+  devToolbar: {
+    enabled: false,
+  },
   integrations: [
     mdx(),
     sitemap({
@@ -44,8 +47,7 @@ export default defineConfig({
       rehypePlugins: [rehypeCallouts],
     }),
     shikiConfig: {
-      themes: { light: "min-light", dark: "night-owl" },
-      defaultColor: false,
+      theme: "min-light",
       wrap: false,
       transformers: [
         transformerFileName({ style: "v2", hideDot: false }),
@@ -66,6 +68,15 @@ export default defineConfig({
       fallbacks: ["monospace"],
       weights: [300, 400, 500, 600, 700],
       styles: ["normal", "italic"],
+      formats: ["woff", "ttf"],
+    },
+    {
+      name: "Roboto Slab",
+      cssVariable: "--font-roboto-slab",
+      provider: fontProviders.google(),
+      fallbacks: ["ui-serif", "Georgia", "serif"],
+      weights: [400, 600, 700],
+      styles: ["normal"],
       formats: ["woff", "ttf"],
     },
   ],
