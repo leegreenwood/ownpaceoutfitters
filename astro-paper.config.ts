@@ -1,15 +1,18 @@
 import { defineAstroPaperConfig } from "./src/types/config";
 
+// TODO: swap in the confirmed .co.uk/.com domain once the Companies House
+// and social-handle checks on the Trello board are resolved.
 export default defineAstroPaperConfig({
   site: {
-    url: "https://astro-paper.pages.dev/",
-    title: "AstroPaper",
-    description: "A minimal, responsive and SEO-friendly Astro blog theme.",
-    author: "Sat Naing",
-    profile: "https://satna.ing",
+    url: "https://ownpaceoutfitters.co.uk/",
+    title: "Own Pace Outfitters",
+    description:
+      "Duke of Edinburgh's Award expedition delivery — structured, patient outdoor coaching at the young person's own pace. A trading arm of Independent Youth Volunteer Support (IYVS).",
+    author: "Lee Greenwood",
+    profile: "https://www.linkedin.com/in/leegreenwood",
     ogImage: "default-og.jpg",
     lang: "en",
-    timezone: "Asia/Bangkok",
+    timezone: "Europe/London",
     dir: "ltr",
   },
   posts: {
@@ -23,16 +26,14 @@ export default defineAstroPaperConfig({
     showArchives: true,
     showBackButton: true,
     editPost: {
-      enabled: true,
-      url: "https://github.com/satnaing/astro-paper/edit/main/",
+      enabled: false,
     },
     search: "pagefind",
   },
   socials: [
-    { name: "github",   url: "https://github.com/satnaing/astro-paper" },
-    { name: "x",        url: "https://x.com/username" },
-    { name: "linkedin", url: "https://www.linkedin.com/in/username/" },
-    { name: "mail",     url: "mailto:yourmail@gmail.com" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/leegreenwood" },
+    // TODO: replace with the OPO contact address once confirmed
+    { name: "mail", url: "mailto:hello@ownpaceoutfitters.co.uk" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },

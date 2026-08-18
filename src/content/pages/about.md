@@ -1,37 +1,24 @@
 ---
 title: "About"
-description: "A bit about me and this blog."
+description: "Own Pace Outfitters is a trading arm of Independent Youth Volunteer Support (IYVS), delivering the Duke of Edinburgh's Award expedition component."
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+Own Pace Outfitters delivers the expedition component of the Duke of Edinburgh's Award: the planning, training, and supervised expeditions that Bronze, Silver, and Gold participants need to complete their award. We work with schools, DofE centres, and families directly, coaching at a structured, patient pace that lets every young person build the skills and confidence to get there.
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+## Part of Independent Youth Volunteer Support
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+Own Pace Outfitters is a trading name of **Independent Youth Volunteer Support (IYVS)**, a Community Interest Company built on years of hands-on youth work — Scouting, coaching, and outdoor education — rather than theory alone. That means every expedition we run sits behind IYVS's safeguarding framework and organisational backing: proper policies, proper accountability, and a charitable structure behind the commercial offer, not just an individual instructor operating alone.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+IYVS CIC · Company number [pending — confirm before launch] · Registered office: [pending — confirm before launch]
 
-## Features
+## Sibling programmes
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+Own Pace Outfitters is one of three trading arms under the IYVS umbrella:
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+- **[IYVS](https://iyvs.org.uk)** — the parent Community Interest Company, and the organisation behind all three programmes below.
+- **[Zanshin Archery](https://zanshinarchery.co.uk)** — archery coaching for neurodivergent and deaf or hard-of-hearing young people, blending traditional instruction with Zen philosophy and breathwork.
+- **[Greenwood Bushcraft](https://greenwoodbushcraft.co.uk)** — wilderness skills for schools, youth groups, and corporate clients: shelter-building, fire-starting, foraging, and navigation.
 
-and so much more.
+If a family or centre we work with already knows Zanshin or Bushcraft, that's not a coincidence — it's the same people, the same standards, and the same belief in structured, hands-on outdoor learning, applied to DofE expedition delivery.
 
-## Show your support
-
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
-
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+Read more about [what we offer](/what-we-offer), [Lee](/about-lee), or [get in touch](/contact) if you're a school or DofE centre exploring expedition support.

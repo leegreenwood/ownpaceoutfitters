@@ -4,6 +4,9 @@ export interface UIStrings {
     posts: string;
     tags: string;
     about: string;
+    whatWeOffer: string;
+    aboutLee: string;
+    contact: string;
     archives: string;
     search: string;
   };
